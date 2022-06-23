@@ -1,0 +1,59 @@
+
+/*pagina acerca de*/
+
+.container__h1Paginas {
+    color: white;
+    padding: 1rem 0;
+
+    h1 {
+        font-weight: bold;
+        text-align: center;
+    }
+}
+
+.container {
+
+    .container__pagina__acercade {
+        padding: 1rem 0;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .container__texto__acercade {
+            
+            .texto__acercade {
+                color: white;
+                font-size: large;
+                font-weight: bold;
+            }
+        }
+
+        .container__imagen__acercade {
+            margin: 1rem 0;
+        }
+    }
+}
+
+/*media pagina acercade*/
+
+@media (min-width: 720px) {
+
+    .container {
+
+        .container__pagina__acercade {
+    
+            .container__texto__acercade {
+                
+                .texto__acercade {
+                    font-size: medium;
+                }
+            }
+    
+            .container__imagen__acercade {
+                width: 50%;
+                margin: 2rem 0;
+            }
+        }
+    }
+}

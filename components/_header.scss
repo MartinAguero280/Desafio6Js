@@ -1,0 +1,48 @@
+@import "../base/variables";
+@import "../components/extends";
+
+/*header*/
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $bg__partes; 
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid #1C1C1C;
+    font-weight: bold;
+    z-index: 1;
+
+    .LogoManoniMotoRep { 
+        width: 200px;
+        height: 60px;
+        align-items: center;  
+    }
+    nav {
+        div {
+            div {
+                ul {
+                    li {
+                        display: inline-block;
+                        padding: 0 0.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*media header*/
+
+@media (min-width: 720px) {
+    header {
+        .container__logo__manonimotorep {
+            transition: all 0.4s;
+            &:hover {
+                transform: scale(1.05);
+            }            
+        }
+    }
+}

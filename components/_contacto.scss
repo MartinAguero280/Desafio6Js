@@ -1,0 +1,107 @@
+
+/*pagina contacto*/
+
+.container__h1Paginas {
+    color: white;
+    padding: 1rem 0;
+
+    h1 {
+        font-weight: bold;
+        text-align: center;
+    }
+}
+
+.container {
+
+    .container__pagina__contacto {
+        padding: 1rem 0;
+
+        .container__pagina__contacto__1 {
+            color: white;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            padding: 1rem 0;
+            font-weight: bold;
+        }
+        .container__pagina__contacto__2 {
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+
+            ul {
+                li {
+                    a {
+                        .boton__facebook__contacto {
+                            border: none;
+                            font-size: 60px;
+                            background-color: transparent;
+                            margin: 0 0.5rem;
+
+                            .icono__facebook__contacto{
+                                color: white;
+                            }
+                        }
+                    }
+
+                    a {
+                        .boton__instagram__contacto {
+                            border: none;
+                            font-size: 60px;
+                            background-color: transparent;
+                            margin: 0 0.5rem;
+
+                            .icono__instagram__contacto{
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*media pagina contacto*/
+
+@media (min-width: 720px) {
+
+    .container {
+
+        .container__pagina__contacto {
+            padding: 1rem 0;
+    
+            .container__pagina__contacto__1 {
+                flex-direction: row;
+                justify-content: center;
+            }
+            .container__pagina__contacto__2 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: start;
+
+                ul {
+                    li {
+                        a {
+                            .boton__facebook__contacto {
+                                transition: all 0.4s;
+                                &:hover {
+                                    filter: drop-shadow(0 0 1px white);
+                                    transform: scale(1.05);
+                                }
+                            }
+                            .boton__instagram__contacto {
+                                transition: all 0.4s;
+                                &:hover {
+                                    filter: drop-shadow(0 0 1px white);
+                                    transform: scale(1.05);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

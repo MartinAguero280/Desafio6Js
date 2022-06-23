@@ -1,0 +1,163 @@
+@import "../base/variables";
+@import "../components/extends";
+@import "../components/mixin";
+
+/*footer*/
+
+footer {
+    width: 100%;
+
+    /*ejemplo variable*/
+    background-color: $bg__partes;
+
+    /*ejemplo de extend*/
+    @extend %flex__column;
+
+    gap: 2rem;
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    padding: 2rem 0;
+
+    /*ejemplo de map*/
+    color: map-get($footer, color);
+
+    /*ejemplo de mixin*/
+    @include color__fondo(white);
+
+    div {
+        ul {
+            li {
+                a {
+                    .boton__facebook__footer {
+                        border: none;
+                        font-size: 60px;
+                        background-color: transparent;
+                        margin: 0 0.5rem;
+
+                        .icono__facebook__footer {
+                            color: black;
+                        }
+                    }
+                }
+                a {
+                    .boton__instagram__footer {
+                        border: none;
+                        font-size: 60px;
+                        background-color: transparent;
+                        margin: 0 0.5rem;
+
+                        .icono__facebook__footer {
+                            color: black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .container__llevameHaciaArriba {
+        position: fixed;
+        right: 0.9rem;
+        bottom: 5.5rem;
+        background-color: transparent;
+
+        a {
+            .boton__llevamehaciaarriba {
+                border: none;
+                font-size: 50px;
+                background-color: transparent;
+
+                .icono__llevameHaciaArriba {
+                    color: #009B7D;
+                }
+            }
+        }
+    }
+    .container__whatsapp {
+        position: fixed;
+        right: 0.5rem;
+        bottom: 2px;
+        background-color: transparent;
+
+        a {
+            .boton__whatsapp {
+                border: none;
+                font-size: 75px;
+                background-color: transparent;
+
+                .icono__whatsapp {
+                    color: #25D366;
+                }
+            }
+        }
+    }
+}
+
+/*media footer*/
+
+@media (min-width: 720px) {
+
+    footer {
+        flex-direction: row;
+        text-align: start;
+        align-items: start;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    
+        div {
+            ul {
+                li {
+                    a {
+                        .boton__facebook__footer {
+                            font-size: 50px;
+                            margin: 0 0.5rem;
+                            transition: all 0.4s;
+                            &:hover {
+                                filter: drop-shadow(0 0 1px black);
+                                transform: scale(1.05);
+                            }
+                        }
+                    }
+                    a {
+                        .boton__instagram__footer {
+                            font-size: 50px;
+                            margin: 0 0.5rem;
+                            transition: all 0.4s;
+                            &:hover {
+                                filter: drop-shadow(0 0 1px black);
+                                transform: scale(1.05);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .container__llevameHaciaArriba {
+            bottom: 5.5rem;
+            transition: all 0.5s;
+    
+            a {
+                .boton__llevamehaciaarriba {
+                    font-size: 50px;
+                    transition: all 0.4s;
+                        &:hover {
+                            transform: scale(1.05);
+                        }
+                }
+            }
+        }
+        .container__whatsapp {
+            transition: all 0.5s;
+    
+            a {
+                .boton__whatsapp {
+                    font-size: 75px;
+                    transition: all 0.4s;
+                        &:hover {
+                            transform: scale(1.05);
+                        }
+                }
+            }
+        }
+    }
+}

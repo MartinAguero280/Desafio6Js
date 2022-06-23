@@ -1,0 +1,178 @@
+@import "./footer";
+
+/*pagina productos*/
+
+.container__h1Paginas {
+    color: white;
+    padding: 1rem 0;
+
+    h1 {
+        font-weight: bold;
+        text-align: center;
+    }
+}
+
+.container {
+
+    .row {
+        
+        .parrafos__productos {
+            color: white;
+
+            .parrafo__productos {
+                font-weight: bold;
+                text-align: center;
+            }
+        }
+        .container__pagina__productos {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+
+            .container__fotoproducto__infoproducto__paginaproductos {
+                width: 18rem;
+                height: auto;
+                border-radius: 10px;
+                
+                .container__foto__producto {
+                    width: 18rem;
+                    height: auto;
+                    border-radius: 10px 10px 0 0;
+                    
+                    .foto__producto {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 10px 10px 0 0;
+                    }
+                }
+            }
+            .container__infoproducto {
+                width: 18rem;
+                height: auto;
+                background-color: white;
+                border-radius: 0 0 10px 10px;
+    
+                .precio__producto {
+                    border-top: 1px solid black;
+                    font-size: x-large;
+                    font-weight: bold;
+                    padding: 0.5rem 0.5rem 0 0.5rem;
+                    margin: 0;
+                }
+    
+                .info__producto {
+                    font-size: x-large;
+                    font-weight: bold; 
+                    padding: 0.5rem 0.5rem 0 0.5rem; 
+                    margin: 0;
+                }
+
+                .container__botonAgregarAlCarrito {
+                    display: flex;
+                    justify-content: center;
+                    padding: 0.5rem 0;
+
+                    .boton__agregarAlCarrito {
+                        font-size: large;
+                        padding: 0.5rem 1.5rem;
+                        font-weight: bold;
+                        border: 1px solid white;
+                        border-radius: 10px;
+                        background-color: rgb(61, 88, 206);
+                        color: white;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+.container__mostrarmas {
+    text-align: center;
+    margin: 2rem 0;
+
+    form {
+        .boton__mostrarmas {
+            font-size: large;
+            padding: 0.5rem 2rem;
+            font-weight: bold;
+            border: 1px solid color black;
+            border-radius: 15px;
+            background-color: white;
+            color: black;
+        }
+    }
+}
+
+/*media pagina productos*/
+
+@media (min-width: 720px) {
+    .container {
+
+        .row {
+        
+            .container__pagina__productos {
+                flex-direction: row;
+                flex-wrap: wrap;
+    
+                .container__fotoproducto__infoproducto__paginaproductos {
+                    width: 15rem;
+                    height: auto;
+                    border-radius: 0px;
+                    transition: all 0.4s;
+                    &:hover {
+                        transform: scale(1.05);
+                    }
+                    
+                    .container__foto__producto {
+                        width: 15rem;
+                        height: auto;
+                        border-radius: 0px;
+                        
+                        .foto__producto {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            border-radius: 0px;
+                        }
+                    }
+                }
+                .container__infoproducto {
+                    width: 15rem;
+                    height: auto;
+                    background-color: white;
+                    border-radius: 0px;
+    
+                    .precio__producto {
+                        font-size: large;
+                    }
+        
+                    .info__producto {
+                        font-size: medium;
+                        font-weight: bold;
+                        
+                    }
+                }
+            }
+        }
+    }
+    
+    .container__mostrarmas {
+    
+        form {
+
+            .boton__mostrarmas {
+                transition: all 0.25s;
+                    &:hover {
+                        box-shadow: 0 0 7px 0 white;
+                        transform: scale(1.05);
+                    }
+            }
+        }
+    }
+}
+
+
