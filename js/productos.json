@@ -1,0 +1,56 @@
+[
+    {
+        "nombre": "Aceite Motul 5100 4t 15w50 Semisintetico",
+        "precio": 1724,
+        "categoria": "aceite",
+        "imagen": "../images/aceite_motul.jpg"
+    },
+    {
+        "nombre": "Bateria Yuasa Ytx5l Bs Gel Honda Cg 150 Titan Xr",
+        "precio": 4598,
+        "categoria": "bateria",
+        "imagen": "../images/bateria_yuasa.jpg"
+    },
+    {
+        "nombre": "Casco para moto Punto Extremo XR650 negro mate talle XL",
+        "precio": 17438,
+        "categoria": "casco",
+        "imagen": "../images/casco_negro.jpg"
+    },
+    {
+        "nombre": "Cubierta 130 90 15 Vee Rubber Indiana Custom 250 Hd 254",
+        "precio": 15798,
+        "categoria": "cubierta",
+        "imagen": "../images/cubierta.jpg"
+    },
+    {
+        "nombre": "Cubiertas Metzeler 90 90 21 + 120 80 18 Enduro 3 Full",
+        "precio": 45035,
+        "categoria": "cubierta",
+        "imagen": "../images/cubiertas_metzeler.jpg"
+    },
+    {
+        "nombre": "Guantes Probiker Racing Pb-4 Cuero Protecciones",
+        "precio": 1999,
+        "categoria": "guantes",
+        "imagen": "../images/guantes_moto.jpg"
+    },
+    {
+        "nombre": "Kit Cilindro Vedamotors 293 Honda Twister Tornado 250",
+        "precio": 14613,
+        "categoria": "cilindro",
+        "imagen": "../images/kit_cilindro.jpg"
+    },
+    {
+        "nombre": "Kit Transmision Did Tornado Honda 250 C Orring Full",
+        "precio": 14609,
+        "categoria": "transmision",
+        "imagen": "../images/kit_transmision.jpg"
+    },
+    {
+        "nombre": "Lubricante Cadena Valvoline Chain Lube 400 Ml",
+        "precio": 2050,
+        "categoria": "lubricante",
+        "imagen": "../images/lubricante_cadena.jpg"
+    }
+]

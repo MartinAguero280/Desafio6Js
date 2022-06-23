@@ -1,7 +1,3 @@
-const botonAgregarAlCarrito = document.querySelectorAll('.boton__agregarAlCarrito');
-botonAgregarAlCarrito.forEach((agregarAlCarrito) => {
-    agregarAlCarrito.addEventListener('click', clickAgregarAlCarrito)
-})
 
 
 function clickAgregarAlCarrito(evento) {
