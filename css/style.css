@@ -851,6 +851,7 @@ footer .container__whatsapp a .boton__whatsapp .icono__whatsapp {
 .container__filaCarrito .fila__productoCarrito .container__parrafosFilaProductoCarrito {
   color: white;
   font-weight: bold;
+  width: 10rem;
 }
 .container__filaCarrito .fila__productoCarrito .container__parrafosFilaProductoCarrito .container__precioCantidad {
   display: flex;
@@ -863,7 +864,6 @@ footer .container__whatsapp a .boton__whatsapp .icono__whatsapp {
 .container__filaCarrito .fila__productoCarrito .container__botonEliminarProducto {
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 .container__filaCarrito .fila__productoCarrito .container__botonEliminarProducto .boton__eliminarProducto {
   color: white;
@@ -872,6 +872,7 @@ footer .container__whatsapp a .boton__whatsapp .icono__whatsapp {
   padding: 0.2rem;
   border-radius: 5px;
   border: 1px solid red;
+  margin-top: 1.2rem;
 }
 
 .container__boton__carrito {

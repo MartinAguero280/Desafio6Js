@@ -44,6 +44,7 @@
         .container__parrafosFilaProductoCarrito {
             color: white;
             font-weight: bold;
+            width: 10rem;
 
             .container__precioCantidad {
                 display: flex;
@@ -52,7 +53,6 @@
 
                 .input__cantidadProducto {
                     width: 2rem;
-                    
                 }
             }
         }
@@ -60,7 +60,6 @@
         .container__botonEliminarProducto {
             display: flex;
             flex-direction: column;
-            justify-content: center;
 
             .boton__eliminarProducto {
                 color: white;
@@ -69,6 +68,7 @@
                 padding: 0.2rem;
                 border-radius: 5px;
                 border: 1px solid red;
+                margin-top: 1.2rem;
             }
         }
     }

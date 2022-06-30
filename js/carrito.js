@@ -42,13 +42,13 @@ function agregarFilaCarrito(productoCarritoImagen, productoCarritoNombre, produc
 
     botonEliminarProductoCarrito.addEventListener('click', eliminarProductoCarrito)
 
-    Swal.fire(`Se a añadido ${productoCarritoNombre} al carrito`)
-
-    Swal.fire(
-        'Exelente!',
-        `Se a añadido ${productoCarritoNombre} al carrito`,
-        'success'
-        )
+    Swal.fire({
+        imageUrl: `${productoCarritoImagen}`,
+        text: `Se a añadido ${productoCarritoNombre} al carrito`,
+        color: '#FFFFFF',
+        background: '#1C1C1C',
+        confirmButtonColor: '#3d58ce'
+        })
 
 }
 
@@ -59,17 +59,22 @@ function eliminarProductoCarrito(evento) {
         text: "Si pulsa en eliminar se removera el producto de su carrito!",
         icon: 'warning',
         showCancelButton: true,
-        confirmButtonColor: '#3085d6',
+        confirmButtonColor: '#00BB2D',
         cancelButtonColor: '#d33',
         confirmButtonText: 'Eliminar',
-        cancelButtonText: 'Cancelar'
+        cancelButtonText: 'Cancelar',
+        color: '#FFFFFF',
+        background: '#1C1C1C'
     }).then((result) => {
         if (result.isConfirmed) {
-            Swal.fire(
-                'Eliminado!',
-                'Su producto a sido eliminado del carrito',
-                'success'
-            )
+            Swal.fire({
+                title: 'Eliminado!',
+                text: 'Su producto a sido eliminado del carrito',
+                icon: 'success',
+                color: '#FFFFFF',
+                background: '#1C1C1C',
+                confirmButtonColor: '#3d58ce'
+            })
             const botonEliminar = evento.target;
             botonEliminar.closest('.container__filaCarrito').remove();
         }
