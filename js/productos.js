@@ -1,8 +1,9 @@
-const botonFiltrar = document.querySelector('#boton__filtrar');
-const categoriaProducto = document.querySelector('#categoria__productos');
+const filtroProducto = document.querySelector('#categoria__productos');
 const contenedorProductos = document.querySelector('#contenedor__productos__pagProductos')
 
-botonFiltrar.addEventListener('click', () => {
+traerDatosProductos();
+
+filtroProducto.addEventListener('click', () => {
     traerDatosProductos();
 })
 
@@ -43,7 +44,7 @@ function crearCartaProducto(array) {
 }
 
 function filtrarCategoria(array) {
-    let categoria = categoriaProducto.value;
+    let categoria = filtroProducto.value;
     if (!categoria) {
         return array;
     } else {
@@ -51,4 +52,3 @@ function filtrarCategoria(array) {
         return resultado;
     }
 }
-
