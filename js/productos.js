@@ -30,7 +30,7 @@ function crearCartaProducto(array) {
             <img src="${producto.imagen}" alt="imagen producto" class="foto__producto"
         </div>
         <div class="container__infoproducto">
-            <p class="precio__producto">$ ${producto.precio} </p>
+            <p class="precio__producto"> $${producto.precio} </p>
             <p class="info__producto"> ${producto.nombre} </p>
             <div class="container__botonAgregarAlCarrito">
                 <button class="boton__agregarAlCarrito" id="boton__agregarAlCarrito">Agregar al carrito</button>

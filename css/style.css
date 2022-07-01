@@ -641,7 +641,7 @@ footer .container__whatsapp a .boton__whatsapp .icono__whatsapp {
   text-align: center;
   margin: 2rem 0;
 }
-.container__mostrarmas form .boton__mostrarmas {
+.container__mostrarmas .boton__comprar {
   font-size: large;
   padding: 0.5rem 2rem;
   font-weight: bold;

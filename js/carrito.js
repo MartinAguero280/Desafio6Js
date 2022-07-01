@@ -6,13 +6,16 @@ function clickAgregarAlCarrito(evento) {
 
     const productoCarritoImagen = productoCarrito.querySelector('.foto__producto').src;
     const productoCarritoNombre = productoCarrito.querySelector('.info__producto').textContent;
-    const productoCarritoPrecio = productoCarrito.querySelector('.precio__producto').textContent;
+    const productoCarritoPrecio = productoCarrito.querySelector('.precio__producto').textContent.replace('$', '');
 
     agregarFilaCarrito(productoCarritoImagen, productoCarritoNombre, productoCarritoPrecio);
+
+    sumarTotalCarrito(productoCarritoPrecio);
 
 }
 
 function agregarFilaCarrito(productoCarritoImagen, productoCarritoNombre, productoCarritoPrecio) {
+
     const filaCarrito = document.createElement('div');
     filaCarrito.className = 'container__filaCarrito';
     filaCarrito.innerHTML =
@@ -22,9 +25,9 @@ function agregarFilaCarrito(productoCarritoImagen, productoCarritoNombre, produc
             <img class="imagen__productoCarrito" src="${productoCarritoImagen}">
 
             <div class="container__parrafosFilaProductoCarrito">
-                <p>Nombre: ${productoCarritoNombre} </p>
+                <p class="producto__carritoNombre">Nombre: ${productoCarritoNombre} </p>
                 <div class="container__precioCantidad">
-                    <p>Precio: ${productoCarritoPrecio} </p>
+                    <p class="productoCarritoPrecio">Precio: $${productoCarritoPrecio} </p>
                     <p>cantidad: <input class="input__cantidadProducto" type="number" value="1" id="" mira min="1" mira max="9" pattern="^[0-9]+" onpaste="return false;" onDrop="return false;" autocomplete=off></p>
                 </div>
             </div>
@@ -39,7 +42,6 @@ function agregarFilaCarrito(productoCarritoImagen, productoCarritoNombre, produc
     document.getElementById('container__carritoTemporal').appendChild(filaCarrito);
 
     const botonEliminarProductoCarrito = filaCarrito.querySelector('#boton__eliminarProducto');
-
     botonEliminarProductoCarrito.addEventListener('click', eliminarProductoCarrito)
 
     Swal.fire({
@@ -49,6 +51,31 @@ function agregarFilaCarrito(productoCarritoImagen, productoCarritoNombre, produc
         background: '#1C1C1C',
         confirmButtonColor: '#3d58ce'
         })
+
+}
+
+    let valorCarrito = 0;
+    let resultado = 0;
+
+function sumarTotalCarrito(productoCarritoPrecio) {
+    resultado = Number(valorCarrito) + Number(productoCarritoPrecio);
+    valorCarrito = resultado;
+    const containerValorCarrito = document.getElementById('total__carrito');
+    containerValorCarrito.innerHTML = `Total: $${valorCarrito}`
+}
+
+function restarTotalCarrito(evento) {
+
+    const clickEvento = evento.target;
+    const filaProducto = clickEvento.closest('.fila__productoCarrito');
+
+    containerFilaProductoPrecio = filaProducto.querySelector('.productoCarritoPrecio');
+    filaProductoPrecio = Number(containerFilaProductoPrecio.textContent.replace('Precio: $ ', ''));
+
+    valorCarrito = Number(document.querySelector('#total__carrito').textContent.replace('Total: $', ''));
+    valorCarrito = Number(valorCarrito) - Number(filaProductoPrecio);
+    const containerValorCarrito = document.getElementById('total__carrito');
+    containerValorCarrito.innerHTML = `Total: $${valorCarrito}`;
 
 }
 
@@ -77,6 +104,19 @@ function eliminarProductoCarrito(evento) {
             })
             const botonEliminar = evento.target;
             botonEliminar.closest('.container__filaCarrito').remove();
+            restarTotalCarrito(evento);
         }
     })
 }
+
+const botonComprar = document.getElementById('boton__comprar');
+botonComprar.addEventListener('click', () => {
+    Swal.fire({
+        icon: 'success',
+        title: 'Compra realizada',
+        text: `El valor total de su compra fue de $${valorCarrito}.`,
+        color: '#FFFFFF',
+        background: '#1C1C1C',
+        confirmButtonColor: '#3d58ce'
+        })
+})

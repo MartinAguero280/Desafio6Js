@@ -94,16 +94,14 @@
     text-align: center;
     margin: 2rem 0;
 
-    form {
-        .boton__mostrarmas {
-            font-size: large;
-            padding: 0.5rem 2rem;
-            font-weight: bold;
-            border: 1px solid color black;
-            border-radius: 15px;
-            background-color: white;
-            color: black;
-        }
+    .boton__comprar {
+        font-size: large;
+        padding: 0.5rem 2rem;
+        font-weight: bold;
+        border: 1px solid color black;
+        border-radius: 15px;
+        background-color: white;
+        color: black;
     }
 }
 
